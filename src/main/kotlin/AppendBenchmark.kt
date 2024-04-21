@@ -9,6 +9,7 @@ import kotlin.random.Random
 
 @State(Scope.Benchmark)
 abstract class AppendBenchmark(val factory: () -> MutableList<Int>) {
+    @Suppress("LeakingThis")
     private var mutableList: MutableList<Int> = factory()
 
     @Param(
