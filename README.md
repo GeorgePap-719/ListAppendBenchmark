@@ -1,6 +1,10 @@
-# Intro
+# Benchmark for appending to the list
+
+Java's `ArrayList` vs `LinkedList`.
 
 ```text
+# JDK: 17.0.11, Amazon Corretto
+
 Benchmark                                        (n)  Mode  Cnt            Score            Error  Units
 AppendArrayListBenchmark.appendBenchmark          10    ss    8         5306.125 ±       6319.921  ns/op
 AppendArrayListBenchmark.appendBenchmark         100    ss    8        24958.000 ±      32616.450  ns/op
