@@ -1,9 +1,9 @@
 import kotlinx.benchmark.gradle.JvmBenchmarkTarget
 
 plugins {
-    kotlin("jvm") version "1.9.22"
-    kotlin("plugin.allopen") version "1.9.22"
-    id("org.jetbrains.kotlinx.benchmark") version "0.4.10"
+    kotlin("jvm") version "2.0.21"
+    kotlin("plugin.allopen") version "2.0.20"
+    id("org.jetbrains.kotlinx.benchmark") version "0.4.13"
 }
 
 allOpen {
@@ -18,7 +18,7 @@ repositories {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlinx:kotlinx-benchmark-runtime:0.4.10")
+    implementation("org.jetbrains.kotlinx:kotlinx-benchmark-runtime:0.4.13")
     testImplementation("org.jetbrains.kotlin:kotlin-test")
 }
 
@@ -33,7 +33,7 @@ benchmark {
     targets {
         register("main") {
             this as JvmBenchmarkTarget
-            jmhVersion = "1.21"
+            jmhVersion = "1.37"
         }
     }
 }
